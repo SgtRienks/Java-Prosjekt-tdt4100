@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../tdt4100-students-23"
+		},
+		{
+			"name": "TDT4100-prosjekt-robinrhe",
+			"path": "../../../.."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic",
+		"java.debug.settings.forceBuildBeforeLaunch": false,
+		"java.debug.settings.console": "internalConsole"
+	}
+}

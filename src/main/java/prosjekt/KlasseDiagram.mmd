@@ -1,0 +1,43 @@
+---
+title: GainsTeller
+---
+classDiagram
+    
+    Matvare <|.. MatvareListe
+    MatvareListListener <|-- MatvareSkriver
+    MatvareListe <|.. MatvareSkriver
+    Matvare : +Double proteinper100
+    Matvare : +Double kaloriper100
+    Matvare : +String matvarenavn
+    Matvare: +matvare()
+    Matvare: +getProteinper100()
+    Matvare: +setProteinper100()
+    Matvare: +getKaloriper100()
+    Matvare: +getMatvarenavn()
+
+    class MatvareListe{
+        +Arraylist<matvare> matvarer
+        +Collection<MatvareListListener> listListeners
+        +LeggTilMatvare(matvare matvare)
+        +FjernMatvare(matvare matvare)
+        +addMatvareListener()
+        +removeMatvareListener()
+        +notifyObservers()
+        +lagUtvalgtListe()
+        +sjekkOmMatvareFinnes()
+        +ProteinUtregning()
+        +KaloriUtregning()
+        
+        
+    }
+    class MatvareListListener {
+        
+        -listChanged2()
+    }
+    class MatvareSkriver{
+        +String FileName
+        +listChanged2()
+        +sjekkOmMatvareFinnes()
+    }
+
+    
